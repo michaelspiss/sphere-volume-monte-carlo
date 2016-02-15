@@ -4,7 +4,9 @@ The project is a visualisation of a vague way to calculate the volume of a spher
 For a better understanding of how the Monte Carlo method works to calculate the volume of a sphere and also help others to understand it at all (without the use of any complicated maths), this small project was created.
 
 With the simple UI you can easily add n new points to the diagram and the software automatically calculates the new value of K/n (which is the sphere's volume).
+The program uses one eighth of a sphere with a radius of 1 for better demonstration purposes.
 
+![Alt](screenshot.png)
 
 #Help! I am not a developer
 
