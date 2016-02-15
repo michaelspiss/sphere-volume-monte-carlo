@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monte  Carlo method</title>
+    <link rel="stylesheet" href="build/css/styles.css"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+</head>
+<body>
+<script type="text/javascript" src="static/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="static/highcharts.js"></script>
+<script type="text/javascript" src="static/highcharts-3d.js"></script>
+<div class="layout">
+    <div class="layout__header">Monte Carlo method</div>
+    <div class="layout__section">
+        <div id="diagram" class="diagram" style="height: 400px"></div>
+        <div class="layout__buttonWrapper">
+            <button class="button button--start" id="startButton">start</button>
+            <button class="button button--stop" id="resetButton">reset</button>
+        </div>
+    </div>
+    <div class="layout__section layout__dataContainer">
+        <div class="layout__row">
+            <span>n<sub>new</sub></span><span>=</span><input type="number" id="valNNew" name="valNNew" />
+        </div>
+        <div class="layout__row">
+            <span>n</span><span>=</span><span id="valN">0</span>
+        </div>
+        <div class="layout__row">
+            <span>K</span><span>=</span><span id="valK">0</span>
+        </div>
+        <div class="layout__row">
+            <span>K/n</span><span>=</span><span id="valKOverN">0</span>
+        </div>
+
+        <div class="layout__footer"></div>
+    </div>
+
+    <script type="text/javascript" src="build/app.min.js"></script>
+</div>
+</body>
+</html>

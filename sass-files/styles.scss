@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #000;
+  color: rgba(0,0,0,.84);
+  overflow-x: hidden;
+}
+
+@import "sass/_layout";
+@import "sass/_button";
+
+.diagram {
+  width: 400px;
+  margin-bottom: 34px;
+}
+
+@media screen and (max-width: 800px) {
+  .layout {
+    flex-direction: column;
+  }
+  .layout__footer {
+    margin-bottom: 54px;
+  }
+}
