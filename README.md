@@ -12,9 +12,13 @@ The red points mark all tested coordinates which lie within the eighth of the sp
 
 ##What the letters mean:
 n<sub>new</sub>: The number of random coordinates that should be generated with the next run
+
 n: The total number of coordinates that have been tested
+
 K: The number of tested coordinates that lie within the sphere
+
 K/n: The sphere's volume (K/n * 8 because it's just an eighth that's being tested)
+
 (<sup>4</sup>/<sub>3</sub>π ~ 4.18879...)
 
 #Help! I am not a developer
