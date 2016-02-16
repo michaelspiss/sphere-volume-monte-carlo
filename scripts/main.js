@@ -147,7 +147,8 @@ $(function () {
             scatter: {
                 width: 1,
                 height: 1,
-                depth: 1
+                depth: 1,
+                enableMouseTracking: false
             }
         },
         yAxis: {
