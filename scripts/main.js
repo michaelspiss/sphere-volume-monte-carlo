@@ -5,12 +5,14 @@
  * Date: 2016-02-16
  */
 
+//global variables
 var n = 0,
     k = 0,
     DisplayN = null,
     DisplayK = null,
     DisplayKOverN = null;
 
+//set up handlers and link to elements
 $(document).ready(function(){
     //setup
     DisplayN = document.getElementById('valN');
@@ -28,10 +30,19 @@ $(document).ready(function(){
     };
 });
 
+/**
+ * Generates a random number from 0 to 1 with three fractional digits
+ * @returns {number}
+ */
 function getRandomInt() {
     return Math.floor(Math.random() * 1000) / 1000;
 }
 
+/**
+ * Generates {number} 3d-coordinates, tests if they lie within the
+ * sphere and adds the points to the diagram
+ * @param {number} count
+ */
 function testCoordinates(count)
 {
     for(var i = 0; i < count; i++)
@@ -53,7 +64,9 @@ function testCoordinates(count)
     }
 }
 
-
+/**
+ * Resets everything to 0
+ */
 function resetCalculations()
 {
     DisplayN.innerHTML = '0';
@@ -65,6 +78,10 @@ function resetCalculations()
     diagram.series[1].setData([], true, false, false);
 }
 
+/**
+ * Starts a new calculation circuit
+ * @returns {boolean} [optional]
+ */
 function startCalculations(){
     //get the string the user entered
     var newCount = document.getElementById('valNNew').value;
