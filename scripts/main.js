@@ -49,7 +49,12 @@ function startCalculations(){
     var newCount = document.getElementById('valNNew').value;
 
     //make sure the input is a number and if not return 0
-    newCount = !isNaN(parseInt(newCount)) ? parseInt(newCount) : 0;
+    if(isNaN(parseInt(newCount)))
+    {
+        return false;
+    }
+
+    newCount = parseInt(newCount);
 
     //set the new n (old n + new n)
     n = n + newCount;
