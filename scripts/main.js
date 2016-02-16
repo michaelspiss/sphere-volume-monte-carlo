@@ -5,12 +5,14 @@
  * Date: 2016-02-16
  */
 
+//global variables
 var n = 0,
     k = 0,
     DisplayN = null,
     DisplayK = null,
     DisplayKOverN = null;
 
+//set up handlers and link to elements
 $(document).ready(function(){
     //setup
     DisplayN = document.getElementById('valN');
@@ -28,34 +30,22 @@ $(document).ready(function(){
     };
 });
 
+/**
+ * Generates a random number from 0 to 1 with three fractional digits
+ * @returns {number}
+ */
 function getRandomInt() {
     return Math.floor(Math.random() * 1000) / 1000;
 }
 
-
-function resetCalculations()
+/**
+ * Generates {number} 3d-coordinates, tests if they lie within the
+ * sphere and adds the points to the diagram
+ * @param {number} count
+ */
+function testCoordinates(count)
 {
-    DisplayN.innerHTML = '0';
-    DisplayK.innerHTML = '0';
-    DisplayKOverN.innerHTML = '0';
-    n = 0;
-    k = 0;
-    diagram.series[0].setData([], false, false, false);
-    diagram.series[1].setData([], true, false, false);
-}
-
-function startCalculations(){
-    //get the string the user entered
-    var newCount = document.getElementById('valNNew').value;
-
-    //make sure the input is a number and if not return 0
-    newCount = !isNaN(parseInt(newCount)) ? parseInt(newCount) : 0;
-
-    //set the new n (old n + new n)
-    n = n + newCount;
-
-    //generate n new coordinates
-    for(var i = 0; i < newCount; i++)
+    for(var i = 0; i < count; i++)
     {
         var newX = getRandomInt(),
             newY = getRandomInt(),
@@ -72,6 +62,43 @@ function startCalculations(){
             diagram.series[0].addPoint([newX, newY, newZ], false, false, false);
         }
     }
+}
+
+/**
+ * Resets everything to 0
+ */
+function resetCalculations()
+{
+    DisplayN.innerHTML = '0';
+    DisplayK.innerHTML = '0';
+    DisplayKOverN.innerHTML = '0';
+    n = 0;
+    k = 0;
+    diagram.series[0].setData([], false, false, false);
+    diagram.series[1].setData([], true, false, false);
+}
+
+/**
+ * Starts a new calculation circuit
+ * @returns {boolean} [optional]
+ */
+function startCalculations(){
+    //get the string the user entered
+    var newCount = document.getElementById('valNNew').value;
+
+    //make sure the input is a number and if not return 0
+    if(isNaN(parseInt(newCount)))
+    {
+        return false;
+    }
+
+    newCount = parseInt(newCount);
+
+    //set the new n (old n + new n)
+    n = n + newCount;
+
+    //generate and test n new coordinates
+    testCoordinates(newCount);
 
     //update view
     DisplayN.innerHTML = n.toString();
