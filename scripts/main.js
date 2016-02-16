@@ -1,5 +1,5 @@
 /*!
- * Copyright 2015, Michael Spiss
+ * Copyright 2016, Michael Spiss
  * Released under the MIT license
  *
  * Date: 2016-02-16
@@ -80,29 +80,11 @@ function startCalculations(){
     var KOverN = n == 0 ? 0 : ((k / n) * 8);
     DisplayKOverN.innerHTML = KOverN.toString();
 
-
-    if ('requestIdleCallback' in window) {
-
-        //make sure the calculated value updates before trying to update the diagram (which would block the numbers)
-        function redraw(deadline)
-        {
-
-                while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && tasks.length > 0)
-                    //draw all points
-                    diagram.redraw();
-
-                if (tasks.length > 0)
-                    //request an idle callback
-                    requestIdleCallback(redraw, { timeout: 2000 });
-        }
-
-    } else {
-        //if requestIdleCallback is not available give the script some time to refresh the view
-        setTimeout(function(){
-            //draw all points
-            diagram.redraw();
-        }, 10);
-    }
+    //wait a bit to give the numbers a chance to update
+    setTimeout(function(){
+        //draw all points
+        diagram.redraw();
+    }, 15);
 
 }
 
