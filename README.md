@@ -27,6 +27,7 @@ If you don't want to change any of the code you **don't** need all the files. Si
 
 [https://github.com/michaspiss/sphere-volume-monte-carlo/releases](https://github.com/michaspiss/sphere-volume-monte-carlo/releases)
 
+To start the software open the file with your browser of choice.
 
 License
 ---
