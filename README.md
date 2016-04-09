@@ -23,9 +23,10 @@ K/n: The sphere's volume (K/n * 8 because it's just an eighth that's being teste
 
 #Help! I am not a developer
 
-If you don't want to change any of the code you **don't** need all the files. The only files you need are index.html and the build and the static folders - that's it!
- 
-To start the software simply open index.html with your browser of choice.
+If you don't want to change any of the code you **don't** need all the files. Simply download the index_standalone.html from the releases page:
+
+[https://github.com/michaspiss/sphere-volume-monte-carlo/releases](https://github.com/michaspiss/sphere-volume-monte-carlo/releases)
+
 
 License
 ---
