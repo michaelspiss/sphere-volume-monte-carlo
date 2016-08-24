@@ -1,5 +1,5 @@
 # Volume of a sphere: Monte Carlo method
-The project is a visualisation of a vague way to calculate the volume of a sphere using the Monte Carlo method
+The project is a visualisation of a vague way to calculate the volume of a sphere using the Monte Carlo method.
 
 This small project was created for a better understanding of how the Monte Carlo method works to calculate the volume of a sphere and also to help others understanding it at all (without the use of any complicated maths).
 
