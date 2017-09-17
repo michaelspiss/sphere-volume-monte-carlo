@@ -10,7 +10,7 @@ The program uses one eighth of a sphere with a radius of 1 for better demonstrat
 
 The red points mark all tested coordinates which lie within the eighth of the sphere. All greyed out markers show the points outside of it.
 
-##What the letters mean:
+## Symbols:
 n<sub>new</sub>: The number of random coordinates that should be generated with the next run
 
 n: The total number of coordinates that have been tested
@@ -21,13 +21,17 @@ K/n: The sphere's volume (K/n * 8 because it's just an eighth that's being teste
 
 (<sup>4</sup>/<sub>3</sub>π ~ 4.18879...)
 
-#Help! I am not a developer
+# How to use
 
-If you don't want to change any of the code you **don't** need all the files. Simply download the index_standalone.html from the releases page:
+You can either use the online version
 
-[https://github.com/michaspiss/sphere-volume-monte-carlo/releases](https://github.com/michaspiss/sphere-volume-monte-carlo/releases)
+http://michaelspiss.github.io/sphere-volume-monte-carlo/
 
-To start the software open the file with your browser of choice.
+or grab the index_standalone.html file from the releases page and open it with your browser of choice
+
+
+https://github.com/michaspiss/sphere-volume-monte-carlo/releases
+
 
 License
 ---
